@@ -1,0 +1,20 @@
+from flask import Flask, request, jsonify
+from generator import generate_deathcore_music
+
+app = Flask(__name__)
+
+@app.route('/generate_music', methods=['POST'])
+def generate_music():
+    # Extract parameters from the request
+    style = request.json.get('style')
+    length = request.json.get('length')
+    intensity = request.json.get('intensity')
+
+    # Call the function to generate music based on the parameters
+    generated_music = generate_deathcore_music(style, length, intensity)
+
+    # Return the generated music as a response
+    return jsonify({'generated_music': generated_music})
+
+if __name__ == '__main__':
+    app.run(debug=True)
