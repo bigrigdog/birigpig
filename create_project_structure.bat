@@ -118,7 +118,7 @@ git init
 git add .
 git commit -m "Initial commit"
 git branch -M main
-git remote add origin https://github.com/bigrigdog/CHANGER.git
+git remote add origin https://github.com/bigrigdog/birigpig.git
 git push -u origin main
 
-echo Project pushed to GitHub successfully. - are you sure?
+echo Project pushed to GitHub successfully.
